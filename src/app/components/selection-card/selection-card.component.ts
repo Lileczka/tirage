@@ -43,7 +43,4 @@ onclick()
   this.visible=!this.visible;
   
 }
-generateRandomItem() {
-  this.randomItem = this.getRandomItem();
-}
 }
