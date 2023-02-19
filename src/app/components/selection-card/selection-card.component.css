@@ -1,0 +1,46 @@
+.container {
+height: 842px;
+background-color: #F0F0F0;
+margin: 0;
+padding: 0;
+}
+
+button {
+    width: 453px;
+    height: 75px;
+    background: #CE0033;
+    border-radius: 60px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    font-style: normal;
+    color: white;
+    line-height: 30px;
+    text-align: center;
+    margin: 164px 520px 85px 539px;
+}
+
+.selectionContainer {
+    width: 896px;
+    height:354px;
+    background-color: white;
+    margin-left: 308px;
+    margin-bottom: 234px;
+    text-align: center;
+    
+}
+
+p {
+    color: black;
+    padding-top: 150px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400px;
+    font-size: 16px;
+}
+h2 {
+    padding-top:120px ;
+}
+.textCache{
+    padding-top:10px ;
+}

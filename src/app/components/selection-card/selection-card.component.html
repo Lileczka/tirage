@@ -1,0 +1,24 @@
+<section>
+    <div class="container">
+        <button (click)="onclick()"
+                type="button"
+                >{{titre}} </button>
+        <div class="selectionContainer">
+            <p *ngIf="cacheMoi">Personne n'a été sélectionné actuellement 👀</p>
+            <ng-container *ngIf="visible">
+            <div><h2 *ngFor="let class of classes  let index = index " 
+                  [class]="class">
+            <div *ngIf="index">
+                 <ng-container *ngIf="class.type=='garçon'">{{ class.prenom }} 🌺
+                  <p class="textCache" *ngIf="visible">Tu es le grand gagnant!</p>
+                 </ng-container>
+                  <ng-container *ngIf="class.type=='fille'">{{ class.prenom }} 🌺
+                <p class="textCache" *ngIf="visible">Tu es le grande gagnante!</p>
+                </ng-container>
+            </div>
+                  </h2></div></ng-container>
+             
+        </div>
+    </div>
+</section>
+

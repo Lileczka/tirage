@@ -1,0 +1,61 @@
+
+  <div class="container">
+    <span class="vertical-line"></span>
+    <form class="formBlock"[formGroup]= "list">
+      <h3>Ajouter un.e absent.e</h3>
+       <select formControlName="etudiant">
+       <option class="textSelect"
+        disabled selected [ngValue]="null">Selectionner une personne</option>
+        <option *ngFor="let class of classes"   
+               [ngValue]= "class">  {{class.prenom}}  
+        </option>
+      </select>
+      <br> <br> 
+      <button (click)="addElement()"
+              type="submit">{{titre}} </button>
+    </form>
+  <div class="salleAbsent">
+    <h3>Liste des absents</h3>
+     <ul>
+      <li *ngFor="let class of Absent;
+              let index = index"
+       [ngClass]="{'classement' : class.type ==='garçon'}">{{class.prenom}}
+      <div class="petitBtn"><span (click)= "enleveElement(index)"> x </span></div>
+      </li>
+    </ul>
+   <h3>Liste des absentes</h3>
+     <ul>
+     <li *ngFor="let class of Absent;
+              let index = index"
+        [ngClass]="{'classement' : class.type === 'fille'}"> {{class.prenom}}
+        <div class="petitBtn"><span (click)= "enleveElement(index)"> x </span></div> 
+    </li>
+   </ul>
+  
+</div>
+
+ 
+ 
+ 
+ 
+  <!--
+<div class="container">
+  <span class="vertical-line"></span>
+  <div class="formAbsent">
+ <h3>Ajouter un.e absent.e</h3>
+<mat-form-field >
+  <mat-label>Selectionner une personne</mat-label>
+  <mat-select  >
+    <mat-option *ngFor="let class of classes" 
+    let index = index 
+    [value]="class.prenom">
+      {{class.prenom}}
+   </mat-option>
+  </mat-select>
+ </mat-form-field>
+ </div>
+ <button (click)="addElement()"
+          type="submit"
+        >{{titre}} </button>
+</div> --> 
+
