@@ -17,12 +17,12 @@ export class EtudiantAbsentService {
     if(Class) {
       return JSON.parse(Class);
     } else {
-      this.createClass(); // Si la liste n'existe pas, on en crée une nouvelle
-      this.getClass(); // On rappelle la méthode pour récupérer la liste créée
+      this.createClass(); //  une nouvelle
+      this.getClass(); //  récupérer la liste 
     }
 
   }
-  //  une nouvelle liste d'étudiants absents vide
+  //  liste d'étudiants absents vide
   private createClass() {
 
     const nouveau = JSON.stringify([]);
@@ -30,22 +30,22 @@ export class EtudiantAbsentService {
 
   }
 
-  // Méthode pour sauvegarder la liste d'étudiants absents en local
+  // sauvegarder la liste d'étudiants absents 
   private saveClass(etudiant: Class) {
     localStorage.setItem('etudiant', JSON.stringify(etudiant));
     
     
   }
 
-   // Méthode pour ajouter un étudiant absent à la liste
+   //  ajouter un étudiant absent à la liste
   public ajoutEtudiant(Absent: Class){
    const etudiant= this.getClass() 
     // Récupération de la liste des étudiants absents
     const fixEtudiant= etudiant.find((etudiant: Class) => etudiant.id==Absent.id); 
-    // On vérifie si l'étudiant est déjà dans la liste
+    // vérification si l'étudiant est déjà dans la liste
     if (fixEtudiant) {
-      console.log("Cette personne est déjà dans la liste des absents"); 
-    // Si l'étudiant est déjà présent, on affiche un message d'erreur dans le localStorage
+      console.log("déjà dans la liste des absents"); 
+    
       
     }
     else {

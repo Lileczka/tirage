@@ -8,7 +8,7 @@
             <ng-container *ngIf="visible">
             <div><h2 *ngFor="let class of classes  let index = index " 
                   [class]="class">
-            <div *ngIf="index">
+            <div *ngIf="getRandomItem()">
                  <ng-container *ngIf="class.type=='garçon'">{{ class.prenom }} 🌺
                   <p class="textCache" *ngIf="visible">Tu es le grand gagnant!</p>
                  </ng-container>

@@ -12,6 +12,7 @@ export class SelectionCardComponent {
   etudiant: Class[]= CLASSES;
   selectedUser : any;
   
+  
  //index = this.etudiant[Math.floor(Math.random() * this.etudiant.length)];
   
  //index = (arr: any[]) =>
@@ -31,12 +32,18 @@ visible: boolean=false
 
 // Math.floor(Math.random() * this.class.prenom.length);
 //index= Math.floor((Math.random() * 10) + 1);
-
-
+getRandomItem() {
+  const randomIndex = Math.floor(Math.random() * CLASSES.length);
+  return CLASSES[randomIndex];
+}
+  
 onclick()
 {
   this.cacheMoi=!this.cacheMoi
   this.visible=!this.visible;
   
+}
+generateRandomItem() {
+  this.randomItem = this.getRandomItem();
 }
 }
